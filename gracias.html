@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias, mi amor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffcccc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: #b30000;
+            font-size: 2rem;
+        }
+        .espacio-video {
+            width: 300px;
+            height: 300px;
+            background-color: #ffffff;
+            border: 2px dashed #b30000;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .flores {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+        .flor-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .flor {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            position: relative;
+            animation: flotar 2s infinite alternate ease-in-out;
+        }
+        .flor:before, .flor:after {
+            content: '';
+            width: 20px;
+            height: 40px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .flor:before {
+            top: -15px;
+            left: -10px;
+            transform: rotate(-30deg);
+        }
+        .flor:after {
+            top: -15px;
+            right: -10px;
+            transform: rotate(30deg);
+        }
+        .flor .petalo-extra {
+            width: 20px;
+            height: 40px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .flor .petalo-extra:nth-child(1) {
+            top: -18px;
+            left: -5px;
+            transform: rotate(-15deg);
+        }
+        .flor .petalo-extra:nth-child(2) {
+            top: -18px;
+            right: -5px;
+            transform: rotate(15deg);
+        }
+        .hoja {
+            width: 15px;
+            height: 25px;
+            background-color: green;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .hoja.izquierda {
+            left: -10px;
+            top: 30px;
+            transform: rotate(-30deg);
+        }
+        .hoja.derecha {
+            right: -10px;
+            top: 30px;
+            transform: rotate(30deg);
+        }
+        .tallo {
+            width: 8px;
+            height: 70px;
+            background-color: green;
+            margin: auto;
+            position: relative;
+        }
+        @keyframes flotar {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="espacio-video">
+        <video width="300" height="300" controls>
+            <source src="LOVE.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+    </div>
+    <h1>Gracias por ser tú, Te Amo mi reina <3</h1>
+    <div class="flores">
+        <div class="flor-container">
+            <div class="flor">
+                <div class="petalo-extra"></div>
+                <div class="petalo-extra"></div>
+                <div class="hoja izquierda"></div>
+                <div class="hoja derecha"></div>
+            </div>
+            <div class="tallo"></div>
+        </div>
+        <div class="flor-container">
+            <div class="flor">
+                <div class="petalo-extra"></div>
+                <div class="petalo-extra"></div>
+                <div class="hoja izquierda"></div>
+                <div class="hoja derecha"></div>
+            </div>
+            <div class="tallo"></div>
+        </div>
+        <div class="flor-container">
+            <div class="flor">
+                <div class="petalo-extra"></div>
+                <div class="petalo-extra"></div>
+                <div class="hoja izquierda"></div>
+                <div class="hoja derecha"></div>
+            </div>
+            <div class="tallo"></div>
+        </div>
+    </div>
+</body>
+</html>
